@@ -17,14 +17,9 @@
 # =========================================================================
 import pytest
 import numpy as np
-# from basic_sort_UNIQUE_SUFFIX import *
 from basic_sort_UNIQUE_SUFFIX.int_sort import bubble, quick, insertion
 
 
-from basic_sort_UNIQUE_SUFFIX import bubble, quick, insertion
-
-
-def is_sorted(int_list):
 def is_sorted(int_list):
     """
     Testing oracle.
@@ -62,14 +57,14 @@ def test_bubble(int_lists):
 
 
 # Test the quick sort algorithm
-def test_quick(int_list):
+def test_quick(int_lists):
     for example in int_lists:
         sorted_list = quick(example.copy())
         assert is_sorted(sorted_list)
 
 
 # Test the insertion sort algorithm
-def test_insertion(int_list):
+def test_insertion(int_lists):
     for example in int_lists:
         sorted_list = insertion(example.copy())
         assert is_sorted(sorted_list)
